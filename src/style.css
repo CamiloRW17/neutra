@@ -128,7 +128,8 @@ p {
 
 .technologies div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 20px;
   border: 1px solid black;
   box-shadow: 10px 10px black;
   padding: 5px;
