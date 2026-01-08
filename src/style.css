@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Orbitron';
-  src: url(./fonts/Orbitron-VariableFont_wght.ttf);
+  font-family: 'Manrope';
+  src: url(./fonts/Manrope-VariableFont_wght.ttf);
 }
 
 @font-face {
@@ -10,25 +10,21 @@
   src: url(./fonts/ZalandoSansExpanded-VariableFont_wght.ttf);
 }
 
-@font-face {
-  font-family: 'Geom';
-  src: url(./fonts/Geom-VariableFont_wght.ttf);
-}
 
 @font-face {
-  font-family: 'Oxanium';
-  src: url('./fonts/Oxanium-VariableFont_wght.ttf');
+  font-family: 'Michroma';
+  src: url(./fonts/Michroma-Regular.ttf);
 }
 
 :root {
   /*Colores*/
-  --color-primary: #818CF8; 
-  --color-bg-main: #0F172A; 
-  --color-bg-card: #1E293B; 
+  --color-primary: #EEE6F7; 
+  --color-bg-main: #21222e; 
+  --color-bg-card: #CCCCCC; 
   --color-text-main: #E2E8F0;
 
   /*Fuentes*/
-  --titles-font: 'Geom';
+  --titles-font: 'Manrope';
   --texts-font: 'ZalandoSans';
 }
 
@@ -41,34 +37,29 @@ body {
   padding: 0;
   overflow-x: hidden;
   min-height: 100vh;
+  background:linear-gradient(to bottom, #53545A, #EEE6F7) ;
 }
-
-header {
-   background: linear-gradient(#28542b, black);
-}
-
 
 nav {
-  font-family: 'Oxanium';
+  font-family: 'Manrope';
   color: white;
 }
 
 
 @media (min-width: 768px){
  nav {
-  font-family: 'Oxanium';
+  font-family: 'Manrope';
   color: white;
   border-radius: 5px;
   padding-left: 40px;
   padding-right: 40px;
-  border: 0.5px solid rgb(66, 66, 66) ;
-  background-color: rgb(163, 163, 163, 0.2);
+  background-color: rgb(33, 34, 46, 0.7);
   box-shadow: 1px 1px 10px black;
  }
 }
 
 .menu-options a:hover {
-  color: greenyellow;
+  color: #EEE6F7;
 }
 
 #close-menu {
@@ -86,10 +77,19 @@ nav {
   background-color: var(--color-text-main);
 }
 
-.hero-img {
-  object-fit: contain;
-  border-radius: 50%;
-  box-shadow: 0 0 1rem greenyellow; 
+
+#hero h1 {
+  font-weight:500;
+  font-family: var(--titles-font);
+  background-image: radial-gradient(circle, #ffffff, #A6A6A6); /* Example colors and shape */
+  
+  /* 2. Clip the background to the text content */
+  -webkit-background-clip: text; /* For Safari/older browsers */
+  background-clip: text;
+  
+  /* 3. Make the actual text color transparent so the background shows through */
+  -webkit-text-fill-color: transparent; /* For Safari/older browsers */
+  color: transparent; /* Standard property */
 }
 
 .titleandname {
@@ -97,14 +97,71 @@ nav {
 }
 
 #web-dev {
-  font-family: 'Oxanium';
+  font-family: 'Manrope';
+}
+
+#brand {
+  font-family: 'Michroma';
 }
 
 .titleandname h1 {
   font-weight: 800;
-  color: #a8f7bd;
+  color: #CCCCCC;
 }
 
+
+#what-we-do p {
+  font-family:var(--titles-font);
+  color: #F9F9F9;
+}
+
+p span {
+  font-style: italic;
+}
+
+#what-we-do button {
+  background:radial-gradient(circle, #ffffff, var(--color-primary));
+  width: fit-content;
+  color: #21222e;
+}
+
+#carousel-container .snap-center {
+  background:radial-gradient(circle, #ffffff, #E2E8F0);
+  width: fit-content;
+  color: #21222e;
+}
+
+#carousel-container h3 {
+  color: #21222e;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+      display: none;
+}
+        /* Ocultar barra de scroll para IE, Edge and Firefox */
+.no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+}
+
+.info-card div{
+  color: var(--color-bg-main);
+}
+
+
+.start {
+  background-color:var(--color-text-main);
+  width: 120px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: var(--color-bg-main);
+}
+
+.start:hover {
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
 
 .professional h3 {
   font-family: var(--texts-font);
@@ -113,8 +170,7 @@ nav {
 
 h4 {
   font-family: var(--titles-font);
-  font-weight:600;
-  color: black;
+  color:#dedede;
   text-align: center;
   width: fit-content;
   align-self: center;
