@@ -177,6 +177,14 @@ h4 {
   padding: 10px;
 }
 
+#selectedw {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#selectedw h4 {
+  color: white;
+}
 
 p {
     font-family: var(--titles-font);
